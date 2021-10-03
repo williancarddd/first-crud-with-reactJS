@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AddGame } from "../../Components/AddGame";
 import { Card } from "../../Components/Card";
 import { CheckGame } from "../../Components/CheckGame";
 import { ContainerCard } from "../../Components/ContainerCard";
@@ -12,6 +13,8 @@ export function Home(){
         return <ViewGames />
       case 1:
         return <CheckGame />
+      case  2:
+        return <AddGame />
       default:
         return ''
     }
@@ -28,7 +31,7 @@ export function Home(){
         <Card onclick={() => setCardSelected(1)}>
           Check Game
         </Card>
-        <Card>
+        <Card onclick={() => setCardSelected(2)}>
           Add Game
         </Card>
         <Card>
