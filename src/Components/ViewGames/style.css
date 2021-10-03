@@ -1,0 +1,21 @@
+.data-games{
+  margin-top: 20px;
+  height: 200px;
+  overflow-x: scroll;
+  padding: 1em;
+}
+.list-games{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  list-style-type: none;
+}
+.data-games::-webkit-scrollbar{
+  background-color: rgba(227, 224, 231, 0.089);
+  border-radius: 22px;
+  width: 10px;
+}
+.data-games::-webkit-scrollbar-thumb{
+  background: #2b0238;
+  border-radius: 22px;
+}

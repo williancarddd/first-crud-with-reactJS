@@ -1,0 +1,9 @@
+.container-card{
+  display: flex;
+  min-height: 200px;
+  max-width: 600px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; 
+  gap: 20px;
+}
