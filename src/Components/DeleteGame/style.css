@@ -1,0 +1,35 @@
+
+
+.deleteGame > label{
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.deleteGame > input{
+  height: 25px;
+  border-radius: 5px;
+  outline: none;
+  border:none;
+  text-align:  center;
+  font-size: 1.5em;
+  padding: 10px;
+}
+.deleteGame > button{
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  width: 100px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  outline: none;
+  border:none;
+  cursor: pointer;
+  background-color: rgba(29, 10, 47, 0.787);
+  color: white;
+}
+
+.deleteGame >button:active{
+  background-color: rgba(135, 35, 182, 0.835);
+}

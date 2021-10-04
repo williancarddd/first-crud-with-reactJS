@@ -3,6 +3,7 @@ import { AddGame } from "../../Components/AddGame";
 import { Card } from "../../Components/Card";
 import { CheckGame } from "../../Components/CheckGame";
 import { ContainerCard } from "../../Components/ContainerCard";
+import { DeleteGame } from "../../Components/DeleteGame";
 import { ViewGames } from "../../Components/ViewGames";
 
 export function Home(){
@@ -15,6 +16,8 @@ export function Home(){
         return <CheckGame />
       case  2:
         return <AddGame />
+      case 3:
+        return <DeleteGame/>
       default:
         return ''
     }
@@ -34,7 +37,7 @@ export function Home(){
         <Card onclick={() => setCardSelected(2)}>
           Add Game
         </Card>
-        <Card>
+        <Card onclick={() => setCardSelected(3)}>
           Delete Game
         </Card>
         <Card>
