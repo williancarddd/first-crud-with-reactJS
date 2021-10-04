@@ -1,10 +1,12 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { apiGame } from '../../Api/ApiGames'
+import { contextGame } from '../../Context/ContextGame'
 import { Card } from '../Card'
 import './style.css'
 
-export function ViewGames(){
+export function ViewGames({update}){
   const [listGames, setListGames] = useState([])
+  const [game, dispatch] = useContext(contextGame)
 
   useEffect(() => {
    ( async () => {
@@ -17,13 +19,17 @@ export function ViewGames(){
     })()
   }, [])
 
+  function handleSetGame(id){
+    const gameSelected = listGames.find(e => e.id == id)
+    dispatch({type:'setGame', payload: gameSelected})
+  }
   return (
     <>
     <section className="data-games">
       <ul className='list-games'>
           {listGames.map(game => {
            return (
-           <li key={game.id}>
+           <li key={game.id} onClick={update ? () => handleSetGame(game.id) : () => {}}>
               <Card>
                 <label >{game.title}</label>
                 <label >{game.year}</label>
